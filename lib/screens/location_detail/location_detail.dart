@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tourismandco/screens/location_detail/text_section.dart';
 
+import 'image_banner.dart';
+
 class LocationDetail extends StatelessWidget {
   const LocationDetail({super.key});
 
@@ -12,6 +14,7 @@ class LocationDetail extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const ImageBanner("assets/images/kiyomizu-dera.jpg"),
               TextSection(Colors.red),
               TextSection(Colors.green),
               TextSection(Colors.blue)
