@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourismandco/screens/location_detail/location_detail.dart';
+import 'package:tourismandco/screens/locations/locations.dart';
 import 'package:tourismandco/style.dart';
 
 void main() {
@@ -11,12 +11,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: const LocationDetail(),
-        theme: ThemeData(
-            appBarTheme: const AppBarTheme(titleTextStyle: appBarTextStyle),
-            textTheme: const TextTheme(
-                titleLarge: titleLargeTextStyle,
-                bodyMedium: bodyTextMediumStyle)));
+    return MaterialApp(home: const Locations(), theme: _theme());
+  }
+
+  ThemeData _theme() {
+    return ThemeData(
+        appBarTheme: const AppBarTheme(titleTextStyle: appBarTextStyle),
+        textTheme: const TextTheme(
+            titleLarge: titleLargeTextStyle, bodyMedium: bodyTextMediumStyle));
   }
 }

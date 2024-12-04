@@ -5,12 +5,13 @@ import 'package:tourismandco/screens/location_detail/text_section.dart';
 import 'image_banner.dart';
 
 class LocationDetail extends StatelessWidget {
-  const LocationDetail({super.key});
+  final int locationId;
+
+  const LocationDetail(this.locationId, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final location = Location.fetchById(locationId)!;
 
     return Scaffold(
         appBar: AppBar(title: Text(location.name)),
